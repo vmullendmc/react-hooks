@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {TextField} from '@material-ui/core'
 
 const InputMargin = {
     marginTop: 10,
@@ -29,11 +30,11 @@ const AddUserForm = props => {
                 style={{ display: 'flex', flexDirection: 'column' }}
             >
                 
-                <label>Name</label>
-                <input type="text" name="name" value={user.name} onChange={handleInputChange} style={InputMargin} />
+                {/* <label>Name</label> */}
+                <TextField label="name" name="name" value={user.name} onChange={handleInputChange} style={InputMargin} />
                 
-                <label>Username</label>
-                <input type="text" name="username" value={user.username} onChange={handleInputChange} style={InputMargin} />
+                {/* <label>Username</label> */}
+                <TextField label="username" name="username" value={user.username} onChange={handleInputChange} style={InputMargin} />
                 
                 <button>Add new user</button>
             </form>
