@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 
 const UserTable = props => {
+    console.log('table props', props)
     return (
         <Table>
             <TableHead>
