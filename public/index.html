@@ -37,5 +37,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBiyU5WEGwr-9-kBpxS8G2SukHWqKyBaYw",
+        authDomain: "testing-hooks.firebaseapp.com",
+        databaseURL: "https://testing-hooks.firebaseio.com",
+        projectId: "testing-hooks",
+        storageBucket: "testing-hooks.appspot.com",
+        messagingSenderId: "185486122480"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>

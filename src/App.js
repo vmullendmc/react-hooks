@@ -69,7 +69,7 @@ const App = () => {
         </Grid>
       </Grid>
       <Grid container spacing={ 8 } style={{ padding: 20 }}>
-        <Grid item xs={ 4 }>
+        <Grid item md={ 4 } xs={ 12 }>
           
           { 
             editing ? (
@@ -84,7 +84,7 @@ const App = () => {
             )
           }
         </Grid>
-        <Grid item xs={ 8 }>
+        <Grid item md={ 8 } sm={ 12 }>
           <h2>
             View users
           </h2>
