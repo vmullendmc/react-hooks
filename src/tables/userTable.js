@@ -1,7 +1,7 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableHead, TableRow, Paper, Button } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 
-const UserTable = props => {    
+const UserTable = props => {
     return (
         <Table>
             <TableHead>
@@ -18,30 +18,36 @@ const UserTable = props => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                { props.users && props.users.length > 0 ? (
-                    props.users.map( user => (
-                        <TableRow key={ user.id }>
-                            <TableCell>{ user.name }</TableCell>
-                            <TableCell>{ user.username }</TableCell>
-                            <TableCell>
-                                <div style={{  }}>
-                                    <button onClick={ () => {
-                                        props.editRow( user )
-                                    }}>
-                                        Edit
-                                    </button>
-                                    <button onClick={ () => props.deleteUser( user.id ) }>
-                                        Delete
-                                    </button>
-                                </div>
-                            </TableCell>
-                        </TableRow>
-                    ))
-                ) : (
-                    <TableRow>
-                        <TableCell colSpan={3}>No users</TableCell>
-                    </TableRow>
-                )}
+                {
+                    props.users && props.users.length > 0 ? (
+                        props.users.map(user => (
+                            <TableRow key={user.id}>
+                                <TableCell>
+                                    {user.name}
+                                </TableCell>
+                                <TableCell>
+                                    {user.username}
+                                </TableCell>
+                                <TableCell>
+                                    <div style={{}}>
+                                        <button onClick={() => {
+                                            props.editRow(user)
+                                        }}>
+                                            Edit
+                                        </button>
+                                        <button onClick={() => props.deleteUser(user.id)}>
+                                            Delete
+                                        </button>
+                                    </div>
+                                </TableCell>
+                            </TableRow>
+                        ))
+                    ) : (
+                            <TableRow>
+                                <TableCell colSpan={3}>No users</TableCell>
+                            </TableRow>
+                        )
+                }
             </TableBody>
         </Table>
     )
