@@ -31,11 +31,13 @@ const App = () => {
   const [ users, setUsers ] = useState( usersData );
   const [ currentUser, setCurrentUser ] = useState( initialFormState );
   const [ editing, setEditing ] = useState( false );
+
+  
   
   // CRUD operations
   const addUser = user => {
     user.id = users.length + 1;
-    setUsers([ ...users, user ])
+    setUsers([ ...users, user ]);
   };
 
   const deleteUser = id => {
@@ -70,7 +72,6 @@ const App = () => {
       </Grid>
       <Grid container spacing={ 8 } style={{ padding: 20 }}>
         <Grid item md={ 4 } xs={ 12 }>
-          
           { 
             editing ? (
               <EditUserForm 
